@@ -1,32 +1,153 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+body {
+  margin: 0;
+  background-color: #f4f4f4;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  height: 100px;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  background: #3ea9db;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #000000, #3ea9db);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #000000, #3ea9db); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+header > img {
+  height: 70%;
+  margin-left:30px;
+}
+
+header > p {
+  text-align: center;
+  font-family: VT323, monospace;
+  color: whitesmoke;
+  font-size: 10vw;
+  margin-left: 20px;
+}
+
+.content {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  position: relative;
+  width: 90%;
+  margin: auto;
+}
+
+.content > img {
+
+  max-width: 100%;
+  max-height: 100vh;
+}
+
+.content > h2 {
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 15px 0;
+  padding: 0 5px;
+  font-family: impact, sans-serif;
+  font-size: 5vw;
+  text-transform: uppercase;
   color: white;
+  letter-spacing: 1px;
+  text-shadow:
+      2px 2px 0 #000,
+      -2px -2px 0 #000,
+      2px -2px 0 #000,
+      -2px 2px 0 #000,
+      0 2px 0 #000,
+      2px 0 0 #000,
+      0 -2px 0 #000,
+      -2px 0 0 #000,
+      2px 2px 5px #000;
 }
 
-.App-link {
-  color: #61dafb;
+.content > .bottom {
+  bottom: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.content > .top {
+  top: 0;
+}
+
+.content-form {
+  width: 90%;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.content-form > input {
+  width: 100%;
+  height: 40px;
+}
+
+.content-form > button {
+  border: none;
+  width: 100%;
+  font-family: VT323, monospace;
+  font-size: 25px;
+  letter-spacing: 1.5px;
+  color: white;
+  background: #3ea9db;
+}
+
+.content-form > input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+font-family: VT323, monospace;
+font-size: 25px;
+text-align: cen
+}
+.content-form > input::-moz-placeholder { /* Firefox 19+ */
+font-family: VT323, monospace;
+font-size: 25px;
+text-align: cen
+}
+.content-form > input:-ms-input-placeholder { /* IE 10+ */
+font-family: VT323, monospace;
+font-size: 25px;
+text-align: cen
+}
+.content-form > input:-moz-placeholder { /* Firefox 18- */
+font-family: VT323, monospace;
+font-size: 25px;
+text-align: cen
+}
+
+@media screen and (min-width: 501px){
+
+  header > img {
+    display: flex;
+    height: 80%;
+    margin-left: 10%;
   }
-  to {
-    transform: rotate(360deg);
+  header > p {
+    font-size: 40px;
+  }
+
+  .content-form {
+    flex-wrap: nowrap;
+  }
+
+  .content-form > input{
+    width: 40%;
+  }
+
+  .content-form > button{
+    width: 20%;
+  }
+
+  .content > h2 {
+  font-size: 38px;
+  }
+  .content > img {
+    width: default;
+    height: default;
   }
 }
